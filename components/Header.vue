@@ -1,31 +1,32 @@
 <template>
   <header>
-      <a id='skipLink' href='#mainMenu'>Skip to Main Menu</a>
-      <div class='flex' id='firstBar'>
-        <div id='usgsidentifier'>
-          <a href='https://www2.usgs.gov'>
+      <a id='skipLink' href='#mainMenu' class='sr-only'>Skip to Main Menu</a>
+      <div class='row' id='firstBar' style='background: black'>
+        <div id='usgsidentifier' class='col-xs-12 col-sm-3 col-md-2'>
+          <a href='https://www2.usgs.gov' >
             <img src='../static/header-logo.jpg' alt='USGS - science for a changing world' title='U.S. Geological Survey Home Page' />
           </a>
         </div>
-        <div id='usgscolorband' class='hidden-xs'>
-          <img src='~/static/header-banner.jpg' alt='sparkling pool water' />
+        <div id='usgscolorband' class='hidden-xs col-sm-7 col-md-8'>
         </div>
-        <div id='usgsccsa'>
+        <div id='usgsccsa' class='col-xs-12 col-sm-2 col-md-2'>
           <a href='https://www2.usgs.gov/'>USGS Home</a>
           <a href='https://www2.usgs.gov/ask/'>Contact USGS</a>
         </div>
       </div>
 
-      <div class='flex' id='usgstitle'>
-        <div class='title'>
-          <a href='/index.html' >California Water Science Center</a>
-        </div>
-        <div id='search_form'>
-          <USASearch></USASearch>
+      <div class='row' >
+        <div id='usgstitle' class='col-xs-12 col-lg-12'>
+          <div class='title col-xs-12 col-lg-8'>
+            <a href='/index.html' style="color: white;">California Water Science Center</a>
+          </div>
+          <div class='col-xs-12 col-lg-4'>
+            <USASearch></USASearch>
+          </div>
         </div>
       </div>
 
-      <div class='flex'>
+      <div class='row'>
         <nav>
           <div class='navbar-header'>
             <p>CAWSC Menu</p>
@@ -54,11 +55,11 @@
       </div>
 
       <!-- breadcrumb -->
-      <ul class='flex' id='breadcrumb' style='margin-bottom: 0;'>
+      <ul class='row' id='breadcrumb' style='margin-bottom: 0;'>
         <p style='font-weight: bold; padding-right: 10px'>You are here:</p>
         <li><a href='/'>Home  </a>/</li>
         <li><a href='/projects'>  Projects  </a>/</li>
-        <li class='active'><a href='./index.html'>  Oil, Gas &amp; Groundwater</a></li>
+        <li class='active'><a href='./index.html'> GAMA</a></li>
       </ul>
 
     </header>
@@ -238,13 +239,14 @@ nav a{
   background-color: black;
   text-align: center;
   height: 80px;
-  width: 16.667%;
   z-index: 99;
 } 
 #usgsidentifier{
-  padding-top: 5px;
+  padding: 5px;
 }
-      
+#usgsidentifier img{
+  margin-left: 20px;
+}
 #usgsccsa{
   display: flex;
   flex-direction: column;
@@ -293,24 +295,20 @@ nav a{
 #usgstitle {
   font-weight: bold;
   line-height: 20px;
-  margin: 0 auto;
+  margin: 0;
   background-color: #003366;
   padding: 0px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
   min-height: 43px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .title{
-  width: 66.67%;
-  min-width: 400px;
   line-height: 25px;
-  font-size: 17.5px;
-  padding: 0px 0px 0px 17.5px;
-  text-align: left;
+  font-size: 1.25em;
+  padding-top: 0.25em;
+  text-align: center;
 }
 .title a{
   font-weight: bold;
@@ -320,13 +318,7 @@ nav a{
 #usgstitle a, #usgstitle a:visited, #usgstitle a:active {
   color: #fff;
 }
-#search_form{
-  height: 40px;
-  width: 33.33%;
-  line-height: 20px;
-  padding: 0px 15px;
-  font-weight: bold;
-}
+
 #breadcrumb{
   list-style-type: none;
   justify-content: flex-start;
@@ -344,7 +336,17 @@ nav a{
 #breadcrumb li.active a{
   color: #333;
 }
-
+@media only screen and (max-width: 1036px) {
+  #usgsidentifier{
+ 
+  }
+}
+@media only screen and (min-width: 992px){
+  .title{
+    text-align: left;
+    padding: 0.5em 0 0 1em;
+  }
+}
 /* Small devices (tablets, 768px and under) */
 @media only screen and (max-width:768px) { 
   #usgsccsa {
@@ -362,9 +364,7 @@ nav a{
   .title{
     text-align: center;
   }
-  #search_form{
-    margin: 0 auto;
-  }
+
    #usgscolorband{
     width: 0%;
     visibility: none;

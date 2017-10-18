@@ -1,12 +1,11 @@
 <template>
 	<div>
 		<div class='title'>
-			<a href='/projects/oil-gas-groundwater/'>
-			<!-- <a href='/projects/COGG_drupal/'> -->
-				<h1>California Oil, Gas, and Groundwater (COGG) Program</h1>
+			<a href=''>
+				<h1></h1>
 			</a>
-			<a target='_blank' href='http://www.waterboards.ca.gov/water_issues/programs/groundwater/sb4/index.shtml' class='lead'>
-				<p >In cooperation with the California State Water Resources Control Board
+			<a target='_blank' href='' class='lead'>
+				<p >
 				</p>
 			</a>
 		</div>
@@ -46,7 +45,6 @@ a>h1, a:hover{
 }
 
 .jumbo{
-	background-image: url('../static/kern-county-injection-well.jpg');
 	background-size: cover;
 	padding: 0;
 	background-position: center;

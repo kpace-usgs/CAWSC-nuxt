@@ -1,14 +1,16 @@
 <template>
 
-	<form accept-charset="UTF-8" action="https://search.usa.gov/search" method="get" >
-		<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+	<form accept-charset="UTF-8" action="https://search.usa.gov/search" method="get"  class='text-center' id='search_form'>
+		<div style="margin:0;padding:0;display:inline;">
+			<input name="utf8" type="hidden" value="&#x2713;" />
+		</div>
 		<input id="affiliate" name="affiliate" title="this field for search engine functionality only" type="hidden" value="california-water-science-usgs" />
 		<!-- <label for="query">Enter Search Term(s):</label> -->
-		<input  autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" title="search term input" placeholder="Search..." />
+		<input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" title="search term input" placeholder="Search..." />
 		<!-- <input name="commit" type="submit" value="Search" /> -->
-		<button type="submit" value="Search" name="commit" class="btn btn-default">
-			<i class="fa fa-search" aria-hidden="true"></i>
-		</button>
+		
+		<button type="submit" value="Search" name="commit" class="btn btn-default"><i class="fa fa-search" aria-hidden='true'></i></button>
+
 	</form>		
 
 </template>
@@ -21,7 +23,19 @@ export default {
 </script>
 
 <style scoped>
-	form{
+#search_form{
+	padding: 0.25em;
+	color: black;
+}
+.text-center{
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	#search_form{
+		float: right;
+	}
+}
+form{
 		float: right;
 		display: flex;
 		align-items: center;
@@ -60,11 +74,12 @@ export default {
 	
 	@media only screen and (max-width:768px){
 		form{
-			margin : 0 -50px;
+			margin : 0 auto;
 			text-align: center;
 			float: none;
 		}
 
 	}
+
 
 </style>
