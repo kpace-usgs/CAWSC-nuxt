@@ -1,5 +1,5 @@
 <template>
-	<footer class='hidden-print row'>
+	<div class='row hidden-print'>
 		<div id='footer'>	
 			<div class='cawscFoot'>
 				<div class='col-xs-12 col-md-3'>
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</div>
 </template>
 
 <script>
@@ -140,10 +140,6 @@ export default {
 
 <style scoped> 
 
-footer{
-	margin: 0;
-	width: 100%;
-}
 i.grey{
 	color: #808080;
 	margin-right: 5px;
@@ -153,14 +149,14 @@ i.grey{
 	border-top: 2px solid #DDD;
 	padding-top: 0.75em;
 	overflow: hidden;
-	margin: 0 -15px;
+	width: 100%;
 }
 #footer {
 	width: 100%;
-	margin: 0 -15px;
+	margin: 0;
 }
 .navbar, #navbar, .navbar-inverse{
-	margin: 0 -15px;
+	margin: 0;
 	border-radius: 0;
 }
 .navbar{

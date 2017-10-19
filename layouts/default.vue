@@ -41,7 +41,9 @@ export default{
     width: 100%;
   }
 }
-
+main{
+  padding: 20px 0;
+}
 .flex{
   display: flex;
   flex-wrap: wrap;
