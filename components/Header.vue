@@ -26,41 +26,32 @@
         </div>
       </div>
 
-      <div class='row'>
-        <nav>
-          <div class='navbar-header'>
-            <p>CAWSC Menu</p>
-            <button type='button' class='navbar-toggle ' role='tab' aria-expanded='false' v-on:click='showNavbar'>
-              <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-          </div>
-          <transition name='slide'>
-            <div class='navbar-collapse' v-if='showNav'>
-              <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/highlights/">Highlights</a></li>
-                <li class='active'><a href="/projects/" >Projects</a></li>
-                <li><a href="/pubs/">Publications</a></li>
-                <li><a href="/data/">Water Data</a></li>
-                <li><a href="/sustainable-groundwater-management">SGMA</a></li>
-                <li><a href="/data/drought">Drought</a></li>
-                <li><a href="/flooding/">Floods</a></li>
-                <li><a href="/land_subsidence/">Land Subsidence</a></li>
-                <li><a href="/water_use/">Water Use</a></li>
-                <li><a href="/partner_with.html">Cooperators</a></li>
-              </ul>
-            </div>
-          </transition>
-        </nav>
-      </div>
 
-      <!-- breadcrumb -->
-      <ul class='row' id='breadcrumb' style='margin-bottom: 0;'>
-        <p style='font-weight: bold; padding-right: 10px'>You are here:</p>
-        <li><a href='/'>Home  </a>/</li>
-        <li><a href='/projects'>  Projects  </a>/</li>
-        <li class='active'><a href='./index.html'> GAMA</a></li>
-      </ul>
+      <nav class='row'>
+        <div class='navbar-header'>
+          <p>CAWSC Menu</p>
+          <button type='button' class='navbar-toggle ' role='tab' aria-expanded='false' v-on:click='showNavbar'>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+        <transition name='slide'>
+          <div class='navbar-collapse' v-if='showNav' style='padding: 20px 15px;'>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/highlights/">Highlights</a></li>
+              <li class='active'><a href="/projects/" >Projects</a></li>
+              <li><a href="/pubs/">Publications</a></li>
+              <li><a href="/data/">Water Data</a></li>
+              <li><a href="/sustainable-groundwater-management">SGMA</a></li>
+              <li><a href="/data/drought">Drought</a></li>
+              <li><a href="/flooding/">Floods</a></li>
+              <li><a href="/land_subsidence/">Land Subsidence</a></li>
+              <li><a href="/water_use/">Water Use</a></li>
+              <li><a href="/partner_with.html">Cooperators</a></li>
+            </ul>
+          </div>
+        </transition>
+      </nav>
 
     </header>
 </template>
@@ -117,7 +108,6 @@ export default {
 nav{
   border-bottom: 1px solid white;
   background-color: #222;
-  width: 100%;
   min-height: 50px;
 }
 /* nav header */
@@ -150,7 +140,6 @@ nav{
   line-height: 20px;
   color: #fff !important;
   width: auto;
-  padding: 20px 15px;
 }
 
 .navbar-collapse ul{
@@ -319,23 +308,6 @@ nav a{
   color: #fff;
 }
 
-#breadcrumb{
-  list-style-type: none;
-  justify-content: flex-start;
-  padding: 12px 20px;
-  background-color: #eceeef;
-}
-#breadcrumb li{
-  padding: 0 5px;
-  display: flex;
-  color: silver;
-}
-#breadcrumb li a{
-  padding-right: 10px;
-}
-#breadcrumb li.active a{
-  color: #333;
-}
 @media only screen and (max-width: 1036px) {
   #usgsidentifier{
  
